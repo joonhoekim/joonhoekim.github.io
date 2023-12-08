@@ -1,9 +1,9 @@
 ---
-title: (Day5) - 제목입력
+title: (Day9) - 제목입력
 author: 김준회
 date: 2023-11-24 23:00:00 +0900
 categories: [TIL, 비트캠프]
-tags: [TIL, Web, 비트캠프, 네이버클라우드, 클래스, 패키지, 컴파일]
+tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
 math: true
 mermaid: true

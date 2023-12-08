@@ -1,9 +1,9 @@
 ---
-title: (Day5) - 제목입력
+title: (Day7) - 컴퓨터 과학 기초 (이진수로 표현하기)
 author: 김준회
 date: 2023-11-22 23:00:00 +0900
 categories: [TIL, 비트캠프]
-tags: [TIL, Web, 비트캠프, 네이버클라우드, 클래스, 패키지, 컴파일]
+tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
 math: true
 mermaid: true
