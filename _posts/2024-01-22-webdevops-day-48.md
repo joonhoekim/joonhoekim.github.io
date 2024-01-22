@@ -1,7 +1,7 @@
 ---
-title: (Day	48) 
+title: (Day	48) 네트워크와 Concurrent 프로그래밍
 author: 김준회
-date: 2024-01-22 12:00:00 +0900
+date: 2024-01-22 18:00:00 +0900
 categories: [TIL, 비트캠프]
 tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
