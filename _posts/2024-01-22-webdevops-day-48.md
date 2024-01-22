@@ -282,11 +282,20 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAAC5CAMAAADXsJC1AAAA2FBMVEX///
 
 그리고 남용하는 것도 좋지 않다. 모바일 기기에서 디코딩시 전력을 사용하게 될 것이기 때문이다. 바이너리를 한번에 받을 수 있는데도 BASE64가 있는 이유는 바이너리를 문자로 변환해서 URL에 포함해야 할 어떤 이유가 있을 때다.
 
-## 동시성 처리 (Concurrency)
-### 선형(Linear) 처리 VS 병행(Parallel) 처리
-### cf: Concurrency VS Parallelism
+## 동시성 프로그래밍 (Concurrency Programming)
+동시성: 여러 프로그램이 동시에 실행되는 **것처럼** 느껴지는 프로그래밍.
+병렬성: 여러 프로그램이 실제로 여러 코어에서 동시에 처리되는 프로그래밍.
+### 선형(Linear) 처리 VS 병행(Concurrent) 처리
+### cf: 병렬(Parallel)은 아니다!
+Concurrency VS Parallelism
+
 ![](https://techdifferences.com/wp-content/uploads/2017/12/Untitled.jpg)
 https://techdifferences.com/difference-between-concurrency-and-parallelism.html
+
+병렬처리가 가능한, 즉 하나의 프로세스를 여러 프로세서가 처리하게 하는 프로그래밍은 상당히 난해하고(문제가 쉽게 발생하고) 어렵다. 일반적으로 웹 프로그래밍을 다룰 때는 병행 처리는 다뤄도 병렬 프로그래밍을 다룰 일은 많지 않다. 용어를 잘 구분해서 사용하자.
+
+> 병렬 프로그래밍은 회로폭을 줄이는 물리적인 성능 개선 외로 CPU의 성능을 극한으로 뽑아낼 수 있는 방법이다. 애플이 CISC 기반 인텔을 버리고 RISC 기반 ARM 프로세서를 채택하고, 명령어가 작은 만큼 병렬프로그래밍에 강점을 보이면서 성능이 아주 많이 개선되었다.
+> [관련 글](https://news.hada.io/topic?id=3315)
 
 ### 병행처리
 하나의 작업을 동시에 여러개 실행하는 것을 말한다.
