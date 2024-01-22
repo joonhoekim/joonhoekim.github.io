@@ -283,19 +283,21 @@ data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAAC5CAMAAADXsJC1AAAA2FBMVEX///
 그리고 남용하는 것도 좋지 않다. 모바일 기기에서 디코딩시 전력을 사용하게 될 것이기 때문이다. 바이너리를 한번에 받을 수 있는데도 BASE64가 있는 이유는 바이너리를 문자로 변환해서 URL에 포함해야 할 어떤 이유가 있을 때다.
 
 ## 동시성 처리 (Concurrency)
-### 선형(Linear) 처리 VS 병행(Concurrent) 처리
-### Concurrency VS Parallelism
+### 선형(Linear) 처리 VS 병행(Parallel) 처리
+### cf: Concurrency VS Parallelism
 ![](https://techdifferences.com/wp-content/uploads/2017/12/Untitled.jpg)
 https://techdifferences.com/difference-between-concurrency-and-parallelism.html
 
 ### 병행처리
 하나의 작업을 동시에 여러개 실행하는 것을 말한다.
 그래서, 그냥 '동시 실행' 이라고 생각해도 다를 게 없다...
+
 * CPU가 여러 쓰레드를 지원하는 경우는 자원을 더 효율적으로 쓸 수 있으므로 같은 시간 안에 더 많은 처리를 할 수 있다. 
 * 각 작업이 **대기해야 하는 시간**도 줄어든다.
 * 동시성 이슈가 있다.
   * 작업들간에 지켜야 할 순서가 없는 경우,
   * 서로 간섭하지 않는 작업들인 경우에 적절하다.
+
 ```C
 // 프로세스 복제하여 병행처리하는 예시
 #include <stdio.h>
@@ -323,6 +325,7 @@ int main() {
 ### 프레임 동시 처리
 머신의 파워에 따라서 게임의 결과가 달라지면 안된다.
 FPS가 잘나온다고 더 좋은 성능으로 움직이면 안된다는 것이다.
-게임엔진에서의 핵심기술이다. [이 사례는](https://www.inven.co.kr/board/black/3584/52570) 그 문제가 현실로 나온 일일까?
+게임엔진에서의 핵심기술이다. [이 사례는](https://www.inven.co.kr/board/black/3584/52570) 그 문제가 현실로 나온 일일까..?
+
 
 
