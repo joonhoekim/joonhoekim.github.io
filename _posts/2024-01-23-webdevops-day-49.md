@@ -18,6 +18,7 @@ image:
 ### DNS 서버와 야코
 순간 이게 생각났다. 알아? 몰라! 알아? 몰라! 알아? 몰라! 알아? 알아!
 [Kids now, Kids then](https://www.youtube.com/watch?v=fWOEhFu9H1U)
+
 ISP 가 제공하는 DNS 서버에 물어보고, DNS 서버는 모르면 하위 서버에 물어보고, 하위 서버는 모르면 또 하위 서버에 물어보고, 이렇게 계속 물어보고 찾으면 IP주소를 반환하고!
 
 ### TCP/IP?
