@@ -63,7 +63,7 @@ URL에 바이너리를 넣고 싶다거나 할 때 말이다.
 
 ![](https://i.namu.wiki/i/jJYPnugiA4GJ9r9kcx1OD8pC_XAtrvdHOsJ2rOskzbooh4IZIfz5wkyZYaRXXt-nTjYDNfsK0_fAh0vBsP8YuhwAUkemmT1tFFP_aeBk5s4O9qESp6JDKyLarurzP5PfFTRSIbWk8QbNsw5mfX7ZVQ.webp)
 
-참고: [차재복님이 작성하신 내용](http://www.ktword.co.kr/test/view/view.php?no=399)
+참고: [차재복님이 작성하신 내용](https://www.ktword.co.kr/test/view/view.php?no=399)
 
 ### 네트워크 연결도
 그래서 
