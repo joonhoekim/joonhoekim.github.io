@@ -137,6 +137,27 @@ rs.getString(title);
 * SELECT 실행될 때 컬럼을 ***실제로 없애는 것이 아니라***, 출력할 부분을 체크한다. 
 * 그래서 SELECT 하지 않은 COLUMN에 대해서도 `ORDER BY`가 가능하다.
 
+
+일반적인 SQL 쿼리의 실행 순서
+
+| 실행 단계                     | 설명                                                               |
+| ----------------------------- | ------------------------------------------------------------------ |
+| 1. FROM                       | 데이터를 조회할 대상 테이블이나 뷰를 지정합니다.                   |
+| 2. WHERE                      | 조건을 지정하여 어떤 행을 선택할지 필터링합니다.                   |
+| 3. GROUP BY                   | 그룹 단위로 데이터를 묶습니다.                                     |
+| 4. HAVING                     | GROUP BY 절과 함께 사용되며, 그룹에 대한 조건을 지정합니다.        |
+| 5. SELECT                     | 조회할 열을 선택합니다.                                            |
+| 6. DISTINCT                   | 중복된 행을 제거합니다.                                            |
+| 7. ORDER BY                   | 결과를 정렬합니다.                                                 |
+| 8. LIMIT / OFFSET             | 결과에서 일부 행만 선택하거나 특정 위치부터 행을 선택합니다.       |
+| 9. UNION / INTERSECT / EXCEPT | 여러 쿼리의 결과를 결합하거나 중복된 결과를 제거합니다.            |
+| 10. JOIN                      | 여러 테이블을 조인하여 연결합니다. JOIN 조건에 따라 행을 합칩니다. |
+| 11. SUBQUERY                  | 서브쿼리를 사용하여 하위 쿼리를 실행합니다.                        |
+| 12. CREATE / ALTER / DROP     | 테이블이나 데이터베이스를 생성, 변경, 삭제합니다.                  |
+| 13. INSERT / UPDATE / DELETE  | 데이터를 추가, 수정, 삭제합니다.                                   |
+| 14. COMMIT / ROLLBACK         | 트랜잭션을 커밋하거나 롤백합니다.                                  |
+
+
 ## JOIN
 ![](https://i.stack.imgur.com/rOeAz.jpg)
 ![](https://cdn.educba.com/academy/wp-content/uploads/2019/11/joins-in-mysql-1.png)
