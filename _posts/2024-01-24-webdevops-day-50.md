@@ -208,8 +208,8 @@ public class Exam0110 {
 * Semaphore
   * `Semaphore N`` 이라고 하면, 동시에 들어올 수 있는 스레드가 N개 라는 의미다.
   * 자바에서는 오로지 Semaphore 1 만을 지원한다. 1이 아닌 다른 Semaphore N을 구현하는 방법이 없다. 
-* Mutex(Mutually Exclusive)
-  * Semaphore 1 의 다른 이름이 Mutual Exclusive이다. 줄여 말해서 Mutex.
+* Mutex(Mutually )
+  * Semaphore 1 의 다른 이름이 Mutual Exclusion이다. 줄여 말해서 Mutex.
 ---
 자바에서 Semaphore 1 을 메서드에 구현하는 방법은 간단하다.
 `synchronized` 키워드를 modifier 앞에 붙여주면 된다.
