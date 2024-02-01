@@ -138,7 +138,9 @@ rs.getString(title);
 * 그래서 SELECT 하지 않은 COLUMN에 대해서도 `ORDER BY`가 가능하다.
 
 
-일반적인 SQL 쿼리의 실행 순서
+아래는 ChatGPT에게 표로 출력해달라고 요청하고 받은 결과다.
+**JOIN이 1순위로 올라와야 하는데 10번에 있다.**
+TABLE that I got from ChatGPT have a problem!! 
 
 | 실행 단계                     | 설명                                                               |
 | ----------------------------- | ------------------------------------------------------------------ |
@@ -157,6 +159,7 @@ rs.getString(title);
 | 13. INSERT / UPDATE / DELETE  | 데이터를 추가, 수정, 삭제합니다.                                   |
 | 14. COMMIT / ROLLBACK         | 트랜잭션을 커밋하거나 롤백합니다.                                  |
 
+**위 표는 ChatGPT에게 받은 결과인데 틀렸으니 주의하라!!**
 
 ## JOIN
 ![](https://i.stack.imgur.com/rOeAz.jpg)
