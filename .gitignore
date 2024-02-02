@@ -146,3 +146,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/ruby,jekyll,visualstudiocode,macos,windows
+.DS_Store
