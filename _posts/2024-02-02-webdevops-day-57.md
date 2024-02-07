@@ -1,7 +1,7 @@
 ---
 title: (Day	56) SQL - JOIN
 author: 김준회
-date: 2024-02-01 17:00:00 +0900
+date: 2024-02-02 17:00:00 +0900
 categories: [TIL, 비트캠프]
 tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
