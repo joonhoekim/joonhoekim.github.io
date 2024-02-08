@@ -19,7 +19,7 @@ image:
 
 * CLI 환경에서 동작
 * `메뉴` 및 메뉴가 소속되는 `그룹`은 Composite Pattern 적용
-*  JDBC Type4 Driver 적용
+*  JDBC Type4 Driver 적용
 * DAO 분리
 * Handler 분리
 * VO 분리
