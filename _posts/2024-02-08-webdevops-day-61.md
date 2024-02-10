@@ -88,12 +88,6 @@ Ubuntu WSL2로 설치함
 (한번 설치했다 삭제하면 wsl -l 명령어로 확인해보고, wsl unregister 명령어 써서 삭제해야 재설치 후 접속 가능하다.)
 
 그리고 zsh 설치하고 oh-my-zsh 설치하고나서 관련 플러그인을 설치하고 싶었다.
-근데 이 명령어가 안먹히길래..
-
-
-```zsh
-```
-
 찾아보니 아주 잘 정리된 글이 있었다.
 
 => [https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df](https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df)
