@@ -1,7 +1,7 @@
 ---
-title: (Day	63)
+title: (Day	65)
 author: 김준회
-date: 2024-02-14 17:00:00 +0900
+date: 2024-02-16 17:00:00 +0900
 categories: [TIL, 비트캠프]
 tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
