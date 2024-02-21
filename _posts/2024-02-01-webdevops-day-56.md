@@ -97,6 +97,107 @@ DAsP, SQLD 할 때 배웠던 것들이 새록새록 기억난다. 거의 다 까
 ## 엔티티(테이블)간 관계의 종류
 왼쪽: 부모, 오른쪽 자식.
 부모:자식
+
+# 헷갈리는 개념
+## 식별관계, 비식별관계 (Identifying / Non-dentifying)
+이해가 될듯 말듯한, 헷갈리는 개념이라 많이 찾아봤다.
+
+정확한 정의부터 확인해보자. erwin에서 작성된 유저 가이드를 [인용](https://bookshelf.erwin.com/bookshelf/public_html/2019R1/Content/User%20Guides/Navigator%20Edition%20Online%20Help/Types%20of%20Relationships.html)했다.
+
+> **Identifying Relationship**
+> 
+> An identifying relationship is represented by a solid line and through it the primary key of the parent migrates to the primary key area of the child entity or table.
+> 
+> ---
+> 
+> **Non-Identifying Relationship**
+> 
+> A non-identifying relationship is represented by a dashed line and through it the primary key of the parent migrates to the non-key area of the child entity or table.
+
+위 내용은 ERD 모델러 유저 가이드에서 나온 말인만큼, 이해하기 쉽게 바꾸면... (area => 집합 으로 의역함) 
+
+```
+식별 관계는 ERD에서 실선으로 표시되며, 
+  부모 테이블의 기본 키(PK)가 
+  자식 엔터티나 테이블의 기본 키(PK) 집합에 속하는 경우임
+
+비식별 관계는 ERD에서 점선으로 표시되며, 
+  부모 테이블의 기본 키(PK)가 
+  자식 엔터티나 테이블의 기본 키(PK) 집합에 속하지 않는 경우임
+```
+
+내게 있어 가장 이해하는데 중요했던 건, `집합(area를 의역)` 이었다. FK=PK라는 말이 많이 나오는데, 이게 이해하는데 상당한 방해가 됐다.
+
+FK가 PK 집합에 속한다라는 말은 어떤 의미인지 이해가 되는데, FK=PK 라는 말은 다른 컬럼은 PK 집합에 속할 수 없다는 것처럼 들리니까..
+
+그리고 어떤 상황이 식별관계여야 하는지는 stackoverflow 답변에서 [좋은 내용들](https://stackoverflow.com/a/2392504)이 있었다.
+
+### 전체적인 설명
+[아래 글은 번역이다. 이 링크는 출처다.](https://stackoverflow.com/a/2392504)
+
+식별 관계의 기술적 정의는 자식의 외래 키가 해당 주 키의 일부인 것을 말함
+
+```
+CREATE TABLE AuthoredBook (
+  author_id INT NOT NULL,
+  book_id INT NOT NULL,
+  PRIMARY KEY (author_id, book_id),
+  FOREIGN KEY (author_id) REFERENCES Authors(author_id),
+  FOREIGN KEY (book_id) REFERENCES Books(book_id)
+);
+```
+book_id는 외래 키이지만 동시에 주 키 집합에도 속함. 따라서 이 테이블은 참조된 테이블 Books와 식별 관계라고 할 수 있음. 마찬가지로 Authors와도 식별 관계임.
+
+유튜브 동영상의 댓글은 해당 비디오와 식별 관계를 가짐. video_id는 Comments 테이블의 주 키의 일부여야 함. 이를 반영하여 DML을 작성하면 아래와 같음.
+```
+CREATE TABLE Comments (
+  video_id INT NOT NULL,
+  user_id INT NOT NULL,
+  comment_dt DATETIME NOT NULL,
+  PRIMARY KEY (video_id, user_id, comment_dt),
+  FOREIGN KEY (video_id) REFERENCES Videos(video_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+```
+최근에는 복합 주 키 대신, 대리키(Surrogate Key)를 사용하는 것이 일반적이기 때문에 이해하기 어려울 수 있음!!
+---
+```
+CREATE TABLE Comments (
+  comment_id SERIAL PRIMARY KEY,
+  video_id INT NOT NULL,
+  user_id INT NOT NULL,
+  comment_dt DATETIME NOT NULL,
+  FOREIGN KEY (video_id) REFERENCES Videos(video_id),
+  FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
+```
+**복합키가 사용되면 테이블이 식별 관계를 갖는지를 애매하게 만듬.**
+
+복합 주 키 대신 대리 키를 사용하면 식별 관계와 비식별 관계 사이에 유의미한 차이가 없어짐. (FK가 PK 집합에 들어가지 않아도, FK가 NOT NULL 이기만 하면 됨. 예시로, 위 유튜브 코멘트 사례에서 video_id가 not null 이기만 해도 됨.) 대리 키를 사용함으로써 테이블 간의 논리적 관계가 변경되지 않았기 때문에 유의미한 차이가 없어졌다고 말하는 것임. 즉, 기존 비디오를 참조하지 않고는 댓글을 만들 수 없는 것은 식별/비식별 관계없이 동일함. 이걸 물리적으로 표현하면, 이것은 단지 video_id가 NOT NULL이어야 함을 의미함. 
+
+식별 관계는 엔터티-관계 다이어그램 작성을 위해서 중요한 것!
+
+### 식별 관계인지 비식별 관계인지를 판단하기 좋은 방법은,
+**자식이 부모를 반드시 필요로 하느냐의 여부다.**
+
+예시를 들면, `저자와 책`, 그리고 `주인과 책`이 그런 관계의 부모-자식 테이블로 설계될 수 있다.
+* 저자가 없는 책은 존재할 수 없다. 
+* 그러나 주인 없는 책은 존재할 수 있다. 
+* 하나의 저자나 주인은 여러 개의 책을 가질 수 있다.
+
+저자 테이블과 책 테이블은 아래와 같이 설계되어야 한다.
+* 책은 저자 없이 쓰여질 수 없다. 책 테이블에 데이터를 등록하려면 저자 정보가 필수적으로 입력되어야 한다.
+
+주인 테이블과 책 테이블은 아래와 같이 설계되어야 한다.
+* 주인 없는 책이 있다면 주인이 누구인지를 나타내는 정보 없이 책 테이블에 데이터를 등록할 수 있어야 한다.
+
+이걸 데이터베이스 용어로 바꾸면,
+* 저자, 그리고 주인은 모두 책 테이블에 있어서 FK이다.
+* `저자와 책` 의 상황에서는 책 테이블의 `저자` 컬럼은 Null이면 안된다.
+* `주인과 책` 의 상황에서는 책 테이블의 `주인` 컬럼은 Null이 가능하다.
+
+정리하면, 만약 나보고 식별관계를 기술적으로 정의하라고 하면 `자식 테이블이 부모테이블에 참조하는 FK가 FK인 동시에 PK의 부분집합인 경우`라고 말하겠다. 그리고 이 식별관계라는 개념이 생긴 이유는, 자식테이블에 의존성이 있어서 부모테이블에 없는 데이터를 FK로 넣는 경우를 방지하기 위해서 구분하려는 것이다. 
+
 ### 1:1 OR 1:0
 PK에 몇개의 FK가 대응되는지로 구분
 * PK 1 개당 FK가 0 또는 1개가 대응함
