@@ -198,6 +198,7 @@ WWW도 사조직임.
 ```
 
 ### 애노테이션 무시?
+
 ```xml
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -234,6 +235,7 @@ public abstract class GenericServlet implements Servlet, ServletConfig, java.io.
 ## 필터 Filter
 필터 인터페이스를 구현해서 만들어야 한다.
 필터 인터페이스를 확인해보면...
+
 ```java
   default void init(FilterConfig filterConfig) throws ServletException {
     }
