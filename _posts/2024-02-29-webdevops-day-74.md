@@ -1,5 +1,5 @@
 ---
-title: (Day	74)
+title: (Day	74) MVC 모델 구현하기
 author: 김준회
 date: 2024-02-29 17:00:00 +0900
 categories: [TIL, 비트캠프]

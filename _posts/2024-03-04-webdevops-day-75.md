@@ -1,5 +1,5 @@
 ---
-title: (Day	75)
+title: (Day	75) JSP 기본 지식
 author: 김준회
 date: 2024-02-29 17:00:00 +0900
 categories: [TIL, 비트캠프]
