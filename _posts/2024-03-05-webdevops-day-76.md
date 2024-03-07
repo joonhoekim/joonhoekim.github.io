@@ -548,7 +548,6 @@ JSTL - c:choose
 반복문을 편하게 만든다.
 
 ```jsp
-생략
 <h1>JSTL - c:forEach</h1>
 <pre>
 - 반복문을 만든다.
@@ -562,9 +561,9 @@ pageContext.setAttribute("names", new String[]{"홍길동", "임꺽정", "유관
 <ul>
 <% 
 String[] names = (String[]) pageContext.getAttribute("names");
-for (String n : names) {%>
+for (String n : names) { %>
   <li><%=n%></li>
-<%} %>
+<% } %>
 </ul>
 
 <hr>
@@ -616,7 +615,6 @@ pageContext.setAttribute("names4", "홍길동,임꺽정,유관순,김구");
     <li>${n}</li>
 </c:forEach>
 </ul>
-생략
 ```
 ⬇️
 ```HTML
