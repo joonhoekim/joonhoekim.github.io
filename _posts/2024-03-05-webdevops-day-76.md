@@ -1,7 +1,7 @@
 ---
 title: (Day	76) JSTL에 대하여
 author: 김준회
-date: 2024-02-29 17:00:00 +0900
+date: 2024-03-05 17:00:00 +0900
 categories: [TIL, 비트캠프]
 tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true

@@ -23,4 +23,3 @@ image:
 
 ![](https://blog.kakaocdn.net/dn/dxHAlz/btqBGYZX1wa/Cdgc00ZuYf0SBxI2CtQuOk/img.jpg)
 
-오늘은 실습에 집중해서 다시 적어야 함...
