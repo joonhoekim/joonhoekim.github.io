@@ -1,5 +1,5 @@
 ---
-title: (Day	62)
+title: (Day	62) 스레드와 풀링기법 만들어서 적용해보기
 author: 김준회
 date: 2024-02-13 17:00:00 +0900
 categories: [TIL, 비트캠프]

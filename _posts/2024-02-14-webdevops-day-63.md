@@ -1,5 +1,5 @@
 ---
-title: (Day	63)
+title: (Day	63) 트랜잭션 제어 기능 분리, 프록시 패턴 적용
 author: 김준회
 date: 2024-02-14 17:00:00 +0900
 categories: [TIL, 비트캠프]

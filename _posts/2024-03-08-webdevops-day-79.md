@@ -1,5 +1,5 @@
 ---
-title: (Day	78) 미니 스프링 프레임워크
+title: (Day	79) 미니 스프링 프레임워크
 author: 김준회
 date: 2024-03-08 17:00:00 +0900
 categories: [TIL, 비트캠프]

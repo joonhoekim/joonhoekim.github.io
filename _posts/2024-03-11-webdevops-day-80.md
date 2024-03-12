@@ -1,5 +1,5 @@
 ---
-title: (Day	78) Spring IoC Container
+title: (Day	80) Spring IoC Container (XML을 이용한 설정)
 author: 김준회
 date: 2024-03-11 17:00:00 +0900
 categories: [TIL, 비트캠프]

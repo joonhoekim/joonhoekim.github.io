@@ -1,5 +1,5 @@
 ---
-title: (Day	72)
+title: (Day	72) 서블릿의 동작구조
 author: 김준회
 date: 2024-02-27 17:00:00 +0900
 categories: [TIL, 비트캠프]
@@ -22,4 +22,3 @@ image:
 서블릿의 동작구조를 알면 스프링 프레임워크도 이해하기 쉬워진다.
 
 ![](https://blog.kakaocdn.net/dn/dxHAlz/btqBGYZX1wa/Cdgc00ZuYf0SBxI2CtQuOk/img.jpg)
-

@@ -1,5 +1,5 @@
 ---
-title: (Day	60)
+title: (Day	60) JDBC와 DB 모델링에 관하여
 author: 김준회
 date: 2024-02-07 17:00:00 +0900
 categories: [TIL, 비트캠프]

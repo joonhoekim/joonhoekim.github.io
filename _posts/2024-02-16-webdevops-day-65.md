@@ -1,5 +1,5 @@
 ---
-title: (Day	65)
+title: (Day	65) 아파치 톰캣, 자원의 표현과 요청/응답 프로토콜
 author: 김준회
 date: 2024-02-16 17:00:00 +0900
 categories: [TIL, 비트캠프]

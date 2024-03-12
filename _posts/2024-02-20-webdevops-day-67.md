@@ -1,5 +1,5 @@
 ---
-title: (Day	67)
+title: (Day	67) Web Application Architecture
 author: 김준회
 date: 2024-02-20 17:00:00 +0900
 categories: [TIL, 비트캠프]

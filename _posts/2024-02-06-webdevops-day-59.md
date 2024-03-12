@@ -1,5 +1,5 @@
 ---
-title: (Day	59)
+title: (Day	59) JDBC 상세
 author: 김준회
 date: 2024-02-06 17:00:00 +0900
 categories: [TIL, 비트캠프]

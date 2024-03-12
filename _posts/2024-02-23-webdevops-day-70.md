@@ -1,5 +1,5 @@
 ---
-title: (Day	70)
+title: (Day	70) 서블릿과 HTTP
 author: 김준회
 date: 2024-02-23 17:00:00 +0900
 categories: [TIL, 비트캠프]
@@ -172,4 +172,5 @@ The HyperText Transfer Protocol (HTTP) 302 Found redirect status response code i
 
 # 궁금증
 1. service()와 doGet doPost 등 메서드별 처리는?
-2. 
+
+=> 각 메서드별로 처리해주는 메서드가 있고, service()는 들어온 메서드 모두를 받게 됨. 그래서 메서드별로 나눠서 처리하려면 doPost, doGet 과 같은 메서드를 오버라이드하게 된다.

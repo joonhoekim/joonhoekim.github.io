@@ -1,5 +1,5 @@
 ---
-title: (Day	68)
+title: (Day	68) 서블릿이란? 
 author: 김준회
 date: 2024-02-21 17:00:00 +0900
 categories: [TIL, 비트캠프]
