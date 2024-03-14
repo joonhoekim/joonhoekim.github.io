@@ -18,7 +18,7 @@ image:
 
 그 다음은 선택인데, 윈도우 기준으로 `C:\Users\USERNAME\eclipse\jee-2023-12\eclipse\eclipse.ini` 파일을 변경해준다. 이클립스가 시작할 때 차지할 램 크기, 그리고 실행 중 차지할 수 있는 최대 램 크기를 변경할 수 있다. (이클립스는 자바로 구동되는 프로그램이며, 이클립스를 구동하는 JVM의 초기/최대 힙 메모리를 변경하는 것이다.)
 
-```ini
+```
 -startup
 plugins/org.eclipse.equinox.launcher_1.6.600.v20231106-1826.jar
 --launcher.library
@@ -50,6 +50,9 @@ openFile
 -Doomph.redirection.index.redirection=index:/->https://raw.githubusercontent.com/eclipse-oomph/oomph/master/setups/
 ```
 
+아래 옵션도 고려할 수 있다.
+```
 -Xshare:on
 -Xquickstart
 -Xverify:none
+```

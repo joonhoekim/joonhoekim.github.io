@@ -1,5 +1,5 @@
 ---
-title: (Day	82) 
+title: (Day	82) IoC Container- @ Config, Java Config 
 author: 김준회
 date: 2024-03-13 17:00:00 +0900
 categories: [TIL, 비트캠프]
