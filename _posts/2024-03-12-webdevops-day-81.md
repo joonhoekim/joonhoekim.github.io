@@ -559,3 +559,8 @@ public class AppConfig {
 }
 
 ```
+
+ @PropertySource 애노테이션  
+ => .properties 파일을 데이터를 메모리에 로딩하는 일을 한다.  
+ => 파일 경로가 클래스 경로를 가리킨다면,  
+    파일 경로 앞에 "classpath:" 접두어를 붙여라.  

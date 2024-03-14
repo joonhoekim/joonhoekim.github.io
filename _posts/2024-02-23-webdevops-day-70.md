@@ -1,5 +1,5 @@
 ---
-title: (Day	70) 서블릿과 HTTP
+title: (Day	70) 서블릿과 HTTP - 2
 author: 김준회
 date: 2024-02-23 17:00:00 +0900
 categories: [TIL, 비트캠프]
