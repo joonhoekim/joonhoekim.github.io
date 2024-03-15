@@ -332,3 +332,25 @@ GPT.. 계속해서 잘못된 정보가 나왔다. 하하..
 
 
 **IoC Container 설정할 때 요즘 대세는 JavaConfig 방식이다. 그 중에서 혼동이 많이 발생하는 부분이 WebApplicationInitializer를 설정하는 부분인데, 위 다이어그램에서 보이는 인터페이스/클래스를 구현/상속하는 방법이 모두 가능하다. 가능하면 인터페이스를 상속하거나, 기능 구현이 최대한 많이 진행된 AbstractAnnotationConfigDispatcherServletInitializer를 사용하는게 좋다.**
+
+참고로 webapp 이나 WEB-INF 같은 경로들은 내장된 변수가 아니다. 톰캣 설정시에 들어간 것이다.
+
+```java
+        // 톰캣 서버에 배포할 웹 애플리케이션의 환경 정보 준비
+        StandardContext ctx = (StandardContext) tomcat.addWebapp(
+            "/", // 컨텍스트 경로(웹 애플리케이션 경로)
+            new File("src/main/webapp").getAbsolutePath() // 웹 애플리케이션 파일이 있는 실제 경로
+        );
+        ctx.setReloadable(true);
+
+        // 웹 애플리케이션 기타 정보 설정
+        WebResourceRoot resources = new StandardRoot(ctx);
+
+        // 웹 애플리케이션의 서블릿 클래스 등록
+        resources.addPreResources(new DirResourceSet(
+            resources, // 루트 웹 애플리케이션 정보
+            "/WEB-INF/classes", // 서블릿 클래스 파일의 위치 정보
+            new File("build/classes/java/main").getAbsolutePath(), // 서블릿 클래스 파일이 있는 실제 경로
+            "/" // 웹 애플리케이션 내부 경로
+        ));
+```
