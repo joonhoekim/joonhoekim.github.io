@@ -1,5 +1,5 @@
 ---
-title: (Day	86)
+title: (Day	86) Spring URL 처리하기
 author: 김준회
 date: 2024-03-19 17:00:00 +0900
 categories: [TIL, 비트캠프]
@@ -83,6 +83,7 @@ Spring에서..
 2. ModelView 객체에 ViewURL을 담아서 리턴하는 방법
 3. `redirect:` 접두어를 붙여서 리턴하는 방법 (h5)
 4. `forward:` 접두어를 붙여서 리턴하는 방법 (h6)
+
 ```java
 // 요청 핸들러의 리턴 값 - view URL 리턴하기, 리다이렉트, forward/include
 package bitcamp.app1;

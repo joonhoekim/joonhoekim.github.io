@@ -23,6 +23,7 @@ image:
 단 @SessionAttribute에서 명시된 값들은 세션에 없는 경우 에러를 띄운다. 파라미터에서도 꺼내지 않는다.
 
 # Spring Framework에서 session(세션) 다루기
+
 ```java
 // 세션 다루기 - HttpSession 직접 사용하기
 package bitcamp.app2;
