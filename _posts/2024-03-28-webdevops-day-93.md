@@ -1,7 +1,7 @@
 ---
-title: (Day	9!) 스프링 프레임 워크 전환 후 리팩토링
+title: (Day	93) 스프링 프레임워크 -> 스프링 부트 전환
 author: 김준회
-date: 2024-03-26 16:00:00 +0900
+date: 2024-03-28 16:00:00 +0900
 categories: [TIL, 비트캠프]
 tags: [TIL, Web, 비트캠프, 네이버클라우드]
 pin: true
@@ -12,14 +12,5 @@ image:
   lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
   alt: TIL image
 ---
-
-실습이 많아서 내용 정리를 따로 모아서 해야겠다.
-
-# 메서드의 파라미터를 final로 받도록 선언하기
-메서드의 파라미터를 final로 받는 것. 리누스 토발즈는 이것을 싫어할 것이다. 로컬 변수를 반드시 필요하지 않은 경우에도 만드는 것을 아주 혐오한다.
-
-그렇지만 파라미터를 final로 받고, 필요한 경우 로컬 변수에 값을 복제하여 사용하는 코드는 꽤나 좋은 코드다. 받아온 파라미터의 값이 변경되지 않음을 보는 사람에게도 보장한다. 코드의 안정성을 높인다.
-
-### 온라인 컨텐츠
-액기스만 전달하는, 방만하지 않은 강의를 골라서 반복해서 들어라. 오프라인은 강사가 강제로 반복하는 것도 좋은 방법인데 온라인은 그렇게 늘어나면 듣기 싫어진다.
-
+오늘은 스프링 부트로 전환했습니다.
+실습내용을 옵시디언에 정리했는데 추후 스터디하고 다시 정리해서 올려야겠네요.
